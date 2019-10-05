@@ -105,7 +105,7 @@ for epoch in range(0, 300):  # For each epoc
 
 #Calculate Test Accuracy
 yhat = np.where(sigmoid(sigmoid(Xtest.dot(best_W1) + best_b1.T).dot(best_W2) + best_b2) >= 0.5, 1, 0)
-test_accuracy = np.sum(np.where(yhat == ytrain, 1, 0)) / float(len(ytest)) * 100
+test_accuracy = np.sum(np.where(yhat == ytest, 1, 0)) / float(len(ytest)) * 100
 print('Test accuracy is:')
 print(test_accuracy)
 
